@@ -1,0 +1,15 @@
+services:
+  - docker:bind
+
+variables:
+  DOCKER_HOST: tcp://docer:2375
+  DOCKER_OVERLAY: overlay
+
+build:
+  image: maven:3-jdk-8
+  stage: build
+  script:
+    - mvn clean install
+  artifacts:
+    paths:
+      - target/*.jar
