@@ -2,8 +2,8 @@ services:
   - docker:bind
 
 variables:
-  DOCKER_HOST: tcp://docer:2375
-  DOCKER_OVERLAY: overlay
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_DRIVER: overlay
 
 build:
   image: maven:3-jdk-8
